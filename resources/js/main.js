@@ -24,7 +24,7 @@ function generateRandomSentence() {
 }
 
 const content = document.querySelector('.content');
-content.innerHTML = `<ul class="content-menu"></ul>`;
+content.innerHTML = `<ul id="content-menu" class="content-menu"></ul>`;
 
 const sidebarMenu = document.querySelector('.sidebar-menu');
 
@@ -34,21 +34,24 @@ for(let i = 0; i < 10; i++){
 }
 
 // 
-const dataTabs = document.querySelectorAll('[data-tab]');
+const dataTabs = document.querySelectorAll('.data-tab');
 const aTags = sidebarMenu.querySelectorAll('a');
 
 dataTabs.forEach((tab, index) => {
-    tab.innerHTML = `<h1 class="centered">Tab ${index}</h1>`;
+    tab.innerHTML += `<h1 class="centered">Tab ${index}</h1>`;
+    tab.innerHTML += `<ul class="content-menu"></ul>`;
+    const contentMenu = tab.querySelector('.content-menu');
     for(let i = 0; i < 10; i++){
-        tab.innerHTML += `<div id="tab-${index}blog${i}" class="blog">
-            <h1>blog ${i}</h1>
-        </div>`;
+        contentMenu.innerHTML += `<li><a href="#tab-${index}blog${i}" class="link">${i} link</a></li>`;
+    }
+
+    for(let i = 0; i < 10; i++){
+        tab.innerHTML += `<div id="tab-${index}blog${i}" class="blog"><h1>blog ${i}</h1></div>`;
     }
 });
 
 dataTabs[0].classList.add('active');
 aTags[0].classList.add('active');
-
 
 // create tab content
 const blogs = document.querySelectorAll('.blog');
@@ -57,6 +60,7 @@ blogs.forEach((blog, index) => {
         blog.innerHTML += `<p>paragraph:${i} ${generateRandomSentence()}</p>`;
     }
 });
+
 
 //show data tabs
 sidebarMenu.addEventListener('click', (e) => {

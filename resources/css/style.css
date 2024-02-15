@@ -55,6 +55,7 @@ body ::selection {
 
 .content-menu{
   display: flex;
+  flex-wrap: wrap;
 }
 
 .content-menu li{
@@ -67,6 +68,21 @@ ul {
 
 li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link{
+  background: #000;
+  padding: 0 10px;
+  color: yellow;
+}
+
+.link:hover{
+  background: yellow;
+  color: #000;
 }
 
 .sidebar {
@@ -135,9 +151,8 @@ li {
 
 .mode-trigger{
   position: absolute;
-  /*qqq*/
   right: 10px;
-  top: 3px;
+  top: 4px;
   background: #000;
   color: yellow;
   border-radius: 5px;
@@ -145,6 +160,21 @@ li {
 }
 
 .mode-trigger:hover{
+  background: yellow;
+  color: #000;
+}
+
+.up-trigger{
+  position: absolute;
+  right: 10px;
+  bottom: 4px;
+  background: #000;
+  color: yellow;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+.up-trigger:hover{
   background: yellow;
   color: #000;
 }
@@ -180,7 +210,7 @@ li {
   .sidebar-trigger{
     display: block;
     position: absolute;
-    right: 50px;
-    top: 3px;
+    right: 43px;
+    top: 4px;
   }
 }
