@@ -71,14 +71,26 @@ sidebarMenu.addEventListener('click', (e) => {
 
 
 //sidebar show and hide
-const button = document.querySelector('.sidebar-trigger');
+const sidebartrigger = document.querySelector('.sidebar-trigger');
 const sidebar = document.querySelector('.sidebar');
 
-button.addEventListener('click', (e) => {
+sidebartrigger.addEventListener('click', (e) => {
     const currentTransform = sidebar.classList.contains('active');
     if (currentTransform === true) {
         sidebar.classList.remove('active');
     } else {
         sidebar.classList.add('active');
+    }
+})
+
+
+const modetrigger = document.querySelector('.mode-trigger');
+
+modetrigger.addEventListener('click', (e) => {
+    const currentMode = content.classList.contains('mode');
+    if (currentMode === true) {
+        content.classList.remove('mode');
+    } else {
+        content.classList.add('mode');
     }
 })

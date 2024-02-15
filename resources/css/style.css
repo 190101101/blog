@@ -48,6 +48,11 @@ body ::selection {
   color: #000;
 }
 
+.content.mode{
+  background: #000;
+  color: #fff;
+}
+
 .content-menu{
   display: flex;
 }
@@ -73,6 +78,9 @@ li {
   height: 100%;
   background-color: #000;
   box-shadow: 0px 0px 24px 6px #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -90,6 +98,9 @@ li {
   outline: 1px solid slategrey;
 }
 
+.site-title{
+  text-align: center;
+}
 
 .sidebar a {
   text-decoration: none;
@@ -122,6 +133,23 @@ li {
   color: #000;
 }
 
+.mode-trigger{
+  position: absolute;
+  /*qqq*/
+  right: 10px;
+  top: 3px;
+  background: #000;
+  color: yellow;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+.mode-trigger:hover{
+  background: yellow;
+  color: #000;
+}
+
+
 .data-tab{
   display: none;
 }
@@ -152,6 +180,7 @@ li {
   .sidebar-trigger{
     display: block;
     position: absolute;
-    right: 10px;
+    right: 50px;
+    top: 3px;
   }
 }
