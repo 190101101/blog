@@ -98,3 +98,10 @@ modetrigger.addEventListener('click', (e) => {
         content.classList.add('mode');
     }
 })
+
+
+// const audio = document.querySelector('.audio');
+
+// setTimeout(() => {
+//     audio.play();
+// }, 1000)
