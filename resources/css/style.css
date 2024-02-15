@@ -48,6 +48,14 @@ body ::selection {
   color: #000;
 }
 
+.content-menu{
+  display: flex;
+}
+
+.content-menu li{
+  margin: 0 5px;
+}
+
 ul {
   text-align: center;
 }
@@ -101,14 +109,17 @@ li {
   background: yellow;
 }
 
-@media only screen and (max-width: 768px) {
-  .sidebar {
-    position: absolute;
-    transform: translateX(-200px);
-  }
-  .content {
-    width: 100%;
-  }
+.sidebar-trigger{
+  display: none;
+  background: #000;
+  color: yellow;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+.sidebar-trigger:hover{
+  background: yellow;
+  color: #000;
 }
 
 .data-tab{
@@ -121,4 +132,26 @@ li {
 
 .centered{
   text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    transform: translateX(-200px);
+  }
+
+  .sidebar.active{
+    transform: translateX(0px);
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .sidebar-trigger{
+    display: block;
+    position: absolute;
+    right: 10px;
+  }
 }
