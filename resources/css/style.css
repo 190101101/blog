@@ -18,6 +18,17 @@ body ::selection {
   color: yellow;
 }
 
+.loading{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background: yellow;
+  box-shadow: 0px 0px 12px 6px yellow;
+  height: 3px;
+  z-index: 1;
+  transition: .1s all;
+}
 
 .container {
   width: 100%;
